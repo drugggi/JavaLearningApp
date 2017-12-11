@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Java Learning App</string>
+
+    <string-array name="learning_tools">
+        <item>Terminology</item>
+        <item>Basic Java Operators</item>
+        <item>True or False statements</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="term_explanation">
+        <item>public</item>
+        <item>A class may be declared with the modifier public, in which case that class is visible
+            to all classes everywhere. If a class has no modifier (the default, also known as package-private), it is visible only within its own package</item>
+        <item>private</item>
+        <item>The private modifier specifies that the member can only be accessed in its own class.</item>
+        <item>protected</item>
+        <item>The protected modifier specifies that the member can only be accessed within its own package
+            (as with package-private) and, in addition, by a subclass of its class in another package.</item>
+        <item>Hash function</item>
+        <item>A hash function is any function that can be used to map data of arbitrary size to data of fixed size.
+            The values returned by a hash function are called hash values, hash codes, digests, or simply hashes.
+            One use is a data structure called a hash table, widely used in computer software for rapid data lookup.
+            Hash functions accelerate table or database lookup by detecting duplicated records in a large file.
+        An example is finding similar stretches in DNA sequences. They are also useful in cryptography. A cryptographic
+            hash function allows one to easily verify that some input data maps to a given hash value, but if the input
+            data is unknown, it is deliberately difficult to reconstruct it (or equivalent alternatives) by knowing the
+            stored hash value. This is used for assuring integrity of transmitted data, and is the building block for HMACs,
+            which provide message authentication. \n (c) https://en.wikipedia.org/wiki/Hash_function </item>
+        <item>Rabin-Karp algorithm</item>
+        <item>Karp–Rabin algorithm is a string searching algorithm created by Richard M. Karp and Michael O. Rabin
+            (1987) that uses hashing to find any one of a set of pattern strings in a text. For text of length n and p
+            patterns of combined length m, its average and best case running time is O(n+m) in space O(p), but its worst-case
+            time is O(nm). In contrast, the Aho–Corasick string matching algorithm has asymptotic worst-time complexity O(n+m) in space O(m).\n
+            A practical application of the algorithm is detecting plagiarism. Given source material, the algorithm can rapidly search through
+            a paper for instances of sentences from the source material, ignoring details such as case and punctuation. Because of the abundance
+            of the sought strings, single-string searching algorithms are impractical. \n (c) https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp_algorithm</item>
+    </string-array>
+
+
+</resources>
