@@ -42,8 +42,15 @@ public class MainActivity extends AppCompatActivity {
         teachingListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent learningIntent = new Intent(getApplicationContext(), TerminologyActivity.class);
-                startActivity(learningIntent);
+
+                if (position == 0) {
+                    Intent learningIntent = new Intent(getApplicationContext(), TerminologyActivity.class);
+                    startActivity(learningIntent);
+                }
+                if (position == 1) {
+                    Intent codeIntent = new Intent(getApplicationContext(), CodeReading.class);
+                    startActivity(codeIntent);
+                }
 
             }
         });

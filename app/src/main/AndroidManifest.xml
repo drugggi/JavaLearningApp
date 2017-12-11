@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TerminologyActivity"></activity>
+        <activity android:name=".TerminologyActivity" />
+        <activity android:name=".CodeReading"></activity>
     </application>
 
 </manifest>
