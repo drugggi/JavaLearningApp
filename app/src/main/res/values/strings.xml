@@ -12,8 +12,88 @@
         <item>public</item>
         <item>A class may be declared with the modifier public, in which case that class is visible
             to all classes everywhere. If a class has no modifier (the default, also known as package-private), it is visible only within its own package</item>
+        <item>abstract</item>
+        <item>An abstract class is a class that is declared abstract—it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed.
+            An abstract method is a method that is declared without an implementation (without braces, and followed by a semicolon), like this:\n
+            abstract void moveTo(double deltaX, double deltaY);\n
+        Abstract classes are similar to interfaces. You cannot instantiate them, and they may contain a mix of methods declared with or without an implementation.
+            However, with abstract classes, you can declare fields that are not static and final, and define public, protected, and private concrete methods.
+            With interfaces, all fields are automatically public, static, and final, and all methods that you declare or define (as default methods) are public.
+            In addition, you can extend only one class, whether or not it is abstract, whereas you can implement any number of interfaces.\n
+        &#169; https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html </item>
+        <item>synchronize</item>
+        <item>The Java programming language provides two basic synchronization idioms: synchronized methods and synchronized statements.
+            The more complex of the two, synchronized statements, are described in the next section. This section is about synchronized methods.\n
+            Synchronized methods enable a simple strategy for preventing thread interference and memory consistency errors: if an object is visible
+            to more than one thread, all reads or writes to that object s variables are done through synchronized methods. (An important exception:
+            final fields, which cannot be modified after the object is constructed, can be safely read through non-synchronized methods, once the
+            object is constructed) This strategy is effective, but can present problems with liveness, as we ll see later in this lesson.\n
+        &#169; https://docs.oracle.com/javase/tutorial/essential/concurrency/syncmeth.html</item>
+        <item>volatile</item>
+        <item>Declaring a volatile Java variable means:\n
+            Essentially, volatile is used to indicate that a variable s value will be modified by different threads.\n
+            The value of this variable will never be cached thread-locally: all reads and writes will go straight to "main memory";
+            Access to the variable acts as though it is enclosed in a synchronized block, synchronized on itself.\n
+            We say "acts as though" in the second point, because to the programmer at least (and probably in most JVM implementations)
+            there is no actual lock object involved.\n
+            a primitive variable may be declared volatile (whereas you can t synchronize on a primitive with synchronized);\n
+            an access to a volatile variable never has the potential to block: we're only ever doing a simple read or write,
+            so unlike a synchronized block we will never hold on to any lock;\n
+            because accessing a volatile variable never holds a lock, it is not suitable for cases where we want to read-update-write
+            as an atomic operation (unless we re prepared to "miss an update");\n
+            a volatile variable that is an object reference may be null (because you re effectively synchronizing on the reference, not the actual object).\n
+            Attempting to synchronize on a null object will throw a NullPointerException.</item>
+        <item>Radix sort</item>
+        <item>In computer science, radix sort is a non-comparative integer sorting algorithm that sorts data with integer keys by grouping keys by
+            the individual digits which share the same significant position and value. A positional notation is required, but because integers can
+            represent strings of characters (e.g., names or dates) and specially formatted floating point numbers, radix sort is not limited to
+            integers. Radix sort dates back as far as 1887 to the work of Herman Hollerith on tabulating machines.
+            Most digital computers internally represent all of their data as electronic representations of binary numbers, so processing
+            the digits of integer representations by groups of binary digit representations is most convenient. Two classifications
+            of radix sorts are least significant digit (LSD) radix sorts and most significant digit (MSD) radix sorts. LSD radix sorts
+            process the integer representations starting from the least digit and move towards the most significant digit. MSD radix sorts work the other way around.\n
+        &#169; https://en.wikipedia.org/wiki/Radix_sort</item>
+        <item>Heap (data structure)</item>
+        <item>In computer science, a heap is a specialized tree-based data structure that satisfies the heap property: if P is a parent node of C,
+            then the key (the value) of P is either greater than or equal to (in a max heap) or less than or equal to (in a min heap) the key of C.
+            The node at the "top" of the heap (with no parents) is called the root node. The heap is one maximally efficient implementation of an
+            abstract data type called a priority queue, and in fact priority queues are often referred to as "heaps", regardless of how they may
+            be implemented. A common implementation of a heap is the binary heap, in which the tree is a binary tree (see figure). The heap data
+            structure, specifically the binary heap, was introduced by J. W. J. Williams in 1964, as a data structure for the heapsort sorting algorithm.
+            Heaps are also crucial in several efficient graph algorithms such as Dijkstra s algorithm. In a heap, the highest (or lowest) priority
+            element is always stored at the root.\n &#169; https://en.wikipedia.org/wiki/Heap_(data_structure) </item>
+        <item>Binary search tree</item>
+        <item>In computer science, binary search trees (BST), sometimes called ordered or sorted binary trees, are a particular type of container:
+            data structures that store "items" (such as numbers, names etc.) in memory. They allow fast lookup, addition and removal of items, and can
+            be used to implement either dynamic sets of items, or lookup tables that allow finding an item by its key (e.g., finding the phone
+            number of a person by name).Binary search trees keep their keys in sorted order, so that lookup and other operations can use the principle of
+            binary search: when looking for a key in a tree (or a place to insert a new key), they traverse the tree from root to leaf, making comparisons
+            to keys stored in the nodes of the tree and deciding, on the basis of the comparison, to continue searching in the left or right subtrees. \n
+        &#169; https://en.wikipedia.org/wiki/Binary_search_tree </item>
+        <item>AVL tree</item>
+        <item>In computer science, an AVL tree (named after inventors Adelson-Velsky and Landis) is a self-balancing binary search tree. It was the first such
+            data structure to be invented. In an AVL tree, the heights of the two child subtrees of any node differ by at most one; if at any time they differ
+            by more than one, rebalancing is done to restore this property. Lookup, insertion, and deletion all take O(log n) time in both the average and worst
+            cases, where n is the number of nodes in the tree prior to the operation. Insertions and deletions may require the tree
+            to be rebalanced by one or more tree rotations.\n
+        &#169; https://en.wikipedia.org/wiki/AVL_tree</item>
+        <item>assert</item>
+        <item>An assertion is a statement in the Java programming language that enables you to test your assumptions about your program. For example, if you write
+            a method that calculates the speed of a particle, you might assert that the calculated speed is less than the speed of light.
+        Each assertion contains a boolean expression that you believe will be true when the assertion executes. If it is not true, the system will throw an error.
+            By verifying that the boolean expression is indeed true, the assertion confirms your assumptions about the behavior of your program, increasing your
+            confidence that the program is free of errors.</item>
+        <item>instanceof</item>
+        <item>The instanceof keyword can be used to test if an object is of a specified type.\n
+            if (objectReference instanceof type)</item>
         <item>private</item>
         <item>The private modifier specifies that the member can only be accessed in its own class.</item>
+        <item>strictfp</item>
+        <item>strictfp is a keyword in the Java programming language that restricts floating-point calculations to ensure portability. In the absence of overflow
+            or underflow, there is no difference in results with or without strictfp. If repeatability is essential, the strictfp modifier can be used to ensure
+            that overflow and underflow occurs in the same places on all platforms. Without the strictfp modifier, intermediate results may use a larger exponent range.
+            The strictfp modifier accomplishes this by representing all intermediate values as IEEE single precision and double precision values, as occurred in
+            earlier versions of the JVM. \n &#169; https://en.wikipedia.org/wiki/Strictfp</item>
         <item>protected</item>
         <item>The protected modifier specifies that the member can only be accessed within its own package
             (as with package-private) and, in addition, by a subclass of its class in another package.</item>
@@ -26,7 +106,7 @@
             hash function allows one to easily verify that some input data maps to a given hash value, but if the input
             data is unknown, it is deliberately difficult to reconstruct it (or equivalent alternatives) by knowing the
             stored hash value. This is used for assuring integrity of transmitted data, and is the building block for HMACs,
-            which provide message authentication. \n (c) https://en.wikipedia.org/wiki/Hash_function </item>
+            which provide message authentication. \n &#169; https://en.wikipedia.org/wiki/Hash_function </item>
         <item>Rabin-Karp algorithm</item>
         <item>Karp–Rabin algorithm is a string searching algorithm created by Richard M. Karp and Michael O. Rabin
             (1987) that uses hashing to find any one of a set of pattern strings in a text. For text of length n and p
@@ -34,7 +114,15 @@
             time is O(nm). In contrast, the Aho–Corasick string matching algorithm has asymptotic worst-time complexity O(n+m) in space O(m).\n
             A practical application of the algorithm is detecting plagiarism. Given source material, the algorithm can rapidly search through
             a paper for instances of sentences from the source material, ignoring details such as case and punctuation. Because of the abundance
-            of the sought strings, single-string searching algorithms are impractical. \n (c) https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp_algorithm</item>
+            of the sought strings, single-string searching algorithms are impractical. \n &#169; https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp_algorithm</item>
+        <item>Amortized analysis</item>
+        <item>In computer science, amortized analysis is a method for analyzing a given algorithm s time complexity, or how much of a resource,
+            especially time or memory, it takes to execute. The motivation for amortized analysis is that looking at the worst-case run time
+            per operation can be too pessimistic.\n
+            While certain operations for a given algorithm may have a significant cost in resources, other operations may not be as costly.
+            Amortized analysis considers both the costly and less costly operations together over the whole series of operations of the algorithm.
+            This may include accounting for different types of input, length of the input, and other factors that affect its performance. \n
+        &#169; https://en.wikipedia.org/wiki/Amortized_analysis</item>
     </string-array>
 
 
