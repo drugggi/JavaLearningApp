@@ -18,7 +18,7 @@ public class IntegerLuku extends Luku {
 
         if (jako) {
             ans = n/m;
-            problem = "int ans = " + n + "/" + m +";\n" + "What valuns holds?";
+            problem = "int ans = " + n + "/" + m +";\n" + "What value holds?";
             super.answer = "" + ans;
         }
         else {

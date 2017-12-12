@@ -8,31 +8,32 @@ import java.util.Random;
 
 public class TyyppiMuunnos {
 
-    private enum operandi {BOOLEAN, CHAR, BYTE, SHORT, INT, LONG, FLOAT, DOUBLE };
+    private enum operandi {DOUBLE, INTEGER, BINARY }
     Luku operoitava;
-    String answer;
+   // String answer;
     Random rng;
 
     public TyyppiMuunnos() {
+        rng = new Random();
     }
 
     public String GetNewProblem() {
-        String problem;
-        operoitava = new IntegerLuku();
 
-        problem = operoitava.Muunna();
+        switch(randomOperandi()) {
+            case DOUBLE:
+                operoitava = new DoubleLuku();
+                return operoitava.Muunna();
+            case INTEGER:
+                operoitava = new IntegerLuku();
+                return operoitava.Muunna();
+            case BINARY:
+                operoitava = new BinaryLuku();
+                return operoitava.Muunna();
+            default:
+                return null;
+        }
 
-/*
-        rng = new Random();
-        double i = rng.nextDouble()*100;
-        problem = "double i = " + i + "\n";
-        int h = (int)i;
-        problem = problem + "int h = (int)i\n";
-        problem = problem + "what is the value of h?";
 
-        answer = "" + h;*/
-
-        return problem;
     }
 
     private operandi randomOperandi() {

@@ -47,7 +47,7 @@ public class CodeReading extends AppCompatActivity {
                     answerBtn.setText("New Problem");
                 }
                 else {
-                    Toast.makeText(CodeReading.this, "Wrong!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CodeReading.this, "Wrong! " + guess_this.GetAnswer(), Toast.LENGTH_SHORT).show();
                 }
             }
         });

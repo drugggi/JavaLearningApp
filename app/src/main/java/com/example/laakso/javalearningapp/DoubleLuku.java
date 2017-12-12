@@ -15,7 +15,7 @@ public class DoubleLuku extends Luku {
         double i = super.rng.nextDouble()*100;
         problem = "double i = " + i + "\n";
         int h = (int)i;
-        problem = problem + "int h = (int)i\n";
+        problem = problem + "int h = (int)i;\n";
         problem = problem + "what is the value of h?";
 
         super.answer = "" + h;
