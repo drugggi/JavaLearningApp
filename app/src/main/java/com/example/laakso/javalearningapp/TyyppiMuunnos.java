@@ -8,7 +8,7 @@ import java.util.Random;
 
 public class TyyppiMuunnos {
 
-    private enum operandi {DOUBLE, INTEGER, BINARY }
+    private enum operandi {DOUBLE, INTEGER, BINARY, STRING }
     Luku operoitava;
    // String answer;
     Random rng;
@@ -29,6 +29,9 @@ public class TyyppiMuunnos {
             case BINARY:
                 operoitava = new BinaryLuku();
                 return operoitava.Muunna();
+            case STRING:
+                operoitava = new StringLuku();
+                return operoitava.Muunna();
             default:
                 return null;
         }
@@ -36,9 +39,12 @@ public class TyyppiMuunnos {
 
     }
 
+    // MUISTA MUUTTAA TAKASIN RANDOMIKSI !!!!!
     private operandi randomOperandi() {
+
         int pick = rng.nextInt(operandi.values().length);
-        return operandi.values()[pick];
+        return operandi.STRING;
+        // return operandi.values()[pick];
     }
 
     public String GetAnswer() {
