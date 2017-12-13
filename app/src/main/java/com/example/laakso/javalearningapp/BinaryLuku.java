@@ -8,7 +8,7 @@ package com.example.laakso.javalearningapp;
 
 public class BinaryLuku extends Luku {
 
-    private enum operandi{JA,TAI,UP,TILDE,SHIFT_L, SHIFT_R, SHIFT_RR}
+    private enum operandi{JA,TAI,UP,TILDE,SHIFT_L, SHIFT_R, SHIFT_RR, PLUS, KERTO}
 
     @Override
     String Muunna() {
@@ -28,6 +28,10 @@ public class BinaryLuku extends Luku {
                 return shiftROperandi();
             case SHIFT_RR:
                 return shiftRROperandi();
+            case PLUS:
+                return plusOperandi();
+            case KERTO:
+                return kertoOperandi();
             default:
                 return null;
         }
@@ -39,6 +43,36 @@ public class BinaryLuku extends Luku {
     String GetAnswer() {
         return super.answer;
     }
+
+    private String kertoOperandi() {
+        String problem;
+
+        int a = super.rng.nextInt(16);
+        int b = super.rng.nextInt(5);
+        int ans = a * b;
+
+        problem = "int ans = " + Integer.toBinaryString(a) + " * " + b + ";\n";
+        problem = problem + "What value ans holds in binary ";
+
+        super.answer = "" + Integer.toBinaryString(ans);
+        return problem;
+    }
+
+    private String plusOperandi() {
+        String problem;
+
+        int a = super.rng.nextInt(63);
+        int b = super.rng.nextInt(63);
+        int ans = a + b;
+
+        problem = "int ans = " + Integer.toBinaryString(a) + " + " + Integer.toBinaryString(b) + ";\n";
+        problem = problem + "What value ans holds in binary ";
+
+        super.answer = "" + Integer.toBinaryString(ans);
+        return problem;
+    }
+
+
     private String shiftRROperandi() {
         String problem;
 
