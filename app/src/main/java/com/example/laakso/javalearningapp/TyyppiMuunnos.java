@@ -43,8 +43,8 @@ public class TyyppiMuunnos {
     private operandi randomOperandi() {
 
         int pick = rng.nextInt(operandi.values().length);
-        return operandi.STRING;
-        // return operandi.values()[pick];
+        //return operandi.STRING;
+        return operandi.values()[pick];
     }
 
     public String GetAnswer() {
