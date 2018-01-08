@@ -30,6 +30,7 @@ public class TerminologyActivity extends AppCompatActivity {
         getAnswer = (Button) findViewById(R.id.answerBtn);
         termTextView = (TextView) findViewById(R.id.termTextView);
         explanationTextView = (TextView) findViewById(R.id.explanationTextView);
+        getAnswer.setText("get answer");
 
         nro_generator = new Random();
         question_nro = nro_generator.nextInt(questions.length);
@@ -40,13 +41,21 @@ public class TerminologyActivity extends AppCompatActivity {
         getAnswer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                explanationTextView.setText(questions[question_nro+1]);
-
-                question_nro = nro_generator.nextInt(questions.length);
-                if (question_nro % 2 == 1) {question_nro--; }
-
-                termTextView.setText(questions[question_nro]);
+                // Set answer text under the term
+                if (getAnswer.getText().equals("get answer") ) {
+                    explanationTextView.setText(questions[question_nro + 1]);
+                    getAnswer.setText("new term");
+                }
+                // Get new term and set answer to empty
+                else {
+                    question_nro = nro_generator.nextInt(questions.length);
+                    if (question_nro % 2 == 1) {
+                        question_nro--;
+                    }
+                    termTextView.setText(questions[question_nro]);
+                    explanationTextView.setText("");
+                    getAnswer.setText("get answer");
+                }
             }
         });
     }

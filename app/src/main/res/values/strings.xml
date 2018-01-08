@@ -18,7 +18,7 @@
             abstract void moveTo(double deltaX, double deltaY);\n
         Abstract classes are similar to interfaces. You cannot instantiate them, and they may contain a mix of methods declared with or without an implementation.
             However, with abstract classes, you can declare fields that are not static and final, and define public, protected, and private concrete methods.
-            With interfaces, all fields are automatically public, static, and final, and all methods that you declare or define (as default methods) are public.
+            With interfaces, all fields are automatically public, static, and final, and all methods that you declare or define \"as default methods\" are public.
             In addition, you can extend only one class, whether or not it is abstract, whereas you can implement any number of interfaces.\n
         &#169; https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html </item>
         <item>synchronize</item>
@@ -38,31 +38,31 @@
             requires (210)2 = 1,048,576.\n &#169; https://en.wikipedia.org/wiki/Karatsuba_algorithm </item>
         <item>volatile</item>
         <item>Declaring a volatile Java variable means:\n
-            Essentially, volatile is used to indicate that a variable s value will be modified by different threads.\n
-            The value of this variable will never be cached thread-locally: all reads and writes will go straight to (main memory);
+            Essentially, volatile is used to indicate that a variable\'s value will be modified by different threads.\n
+            The value of this variable will never be cached thread-locally: all reads and writes will go straight to \"main memory\";
             Access to the variable acts as though it is enclosed in a synchronized block, synchronized on itself.\n
             We say "acts as though" in the second point, because to the programmer at least (and probably in most JVM implementations)
             there is no actual lock object involved.\n
-            a primitive variable may be declared volatile (whereas you can t synchronize on a primitive with synchronized);\n
+            a primitive variable may be declared volatile (whereas you can\'t synchronize on a primitive with synchronized);\n
             an access to a volatile variable never has the potential to block: we re only ever doing a simple read or write,
             so unlike a synchronized block we will never hold on to any lock;\n
             because accessing a volatile variable never holds a lock, it is not suitable for cases where we want to read-update-write
-            as an atomic operation (unless we re prepared to (miss an update));\n
+            as an atomic operation (unless we re prepared to \"miss an update\");\n
             a volatile variable that is an object reference may be null (because you re effectively synchronizing on the reference, not the actual object).\n
             Attempting to synchronize on a null object will throw a NullPointerException.</item>
         <item>Back-end focused</item>
         <item>In software architecture, there may be many layers between the hardware and end user. Each can be spoken of as having a front end and a back end.
             The front is an abstraction, simplifying the underlying component by providing a user-friendly interface, while the back usually handles business logic and data storage.
             In telecommunication, the front can be considered a device or service, while the back is the infrastructure that supports provides this service.
-            A rule of thumb is that the front (or (client)) side is any component manipulated by the user. The server-side (or (back end)) code usually resides
+            A rule of thumb is that the front (or \"client\") side is any component manipulated by the user. The server-side (or \"back end\") code usually resides
             on the server, often far removed physically from the user. \n
         Back-end focused: - Scripting languages like Go, Nodejs, PHP, Python, Ruby, or Perl - Automated testing frameworks for the language being used
         - Database administration - Scalability - Security concerns, authentication and authorization -Data transformation - Backup methods and software \n
         &#169; https://en.wikipedia.org/wiki/Front_and_back_ends </item>
         <item>Breadth-first search (BFS)</item>
         <item>Breadth-first search (BFS) is an algorithm for traversing or searching tree or graph data structures. It starts at the tree root (or some arbitrary
-            node of a graph, sometimes referred to as a (search key) and explores the neighbor nodes first, before moving to the next level neighbours.
-BFS and its application in finding connected components of graphs were invented in 1945 by Konrad Zuse, in his (rejected) Ph.D. thesis on the Plankalkül
+            node of a graph, sometimes referred to as a \"search key\" and explores the neighbor nodes first, before moving to the next level neighbours.
+BFS and its application in finding connected components of graphs were invented in 1945 by Konrad Zuse, in his \"rejected\" Ph.D. thesis on the Plankalkül
             programming language, but this was not published until 1972. It was reinvented in 1959 by E. F. Moore, who used it to find the shortest path
             out of a maze, and discovered independently by C. Y. Lee as a wire routing algorithm (published 1961)\n
         &#169; https://en.wikipedia.org/wiki/Breadth-first_search</item>
@@ -71,7 +71,7 @@ BFS and its application in finding connected components of graphs were invented 
             JavaScript was used primarily for client-side scripting, in which scripts written in JavaScript are embedded in a webpage s HTML,
             to be run client-side by a JavaScript engine in the user s web browser. Node.js enables JavaScript to be used for server-side
             scripting, and runs scripts server-side to produce dynamic web page content before the page is sent to the user s web browser.
-            Consequently, Node.js has become one of the foundational elements of the (JavaScript everywhere) paradigm, allowing web application
+            Consequently, Node.js has become one of the foundational elements of the \"JavaScript everywhere\" paradigm, allowing web application
             development to unify around a single programming language, rather than rely on a different language for writing server side scripts.\n
         &#169; https://en.wikipedia.org/wiki/Node.js</item>
         <item>Front-end web development</item>
@@ -111,18 +111,29 @@ BFS and its application in finding connected components of graphs were invented 
         The durability property ensures that once a transaction has been committed, it will remain so, even in the event of power loss, crashes, or errors. In a relational
             database, for instance, once a group of SQL statements execute, the results need to be stored permanently (even if the database
             crashes immediately thereafter). To defend against power loss, transactions (or their effects) must be recorded in a non-volatile memory.</item>
+        <item>Dispose pattern</item>
+        <item>In object-oriented programming, the dispose pattern is a design pattern for resource management. In this pattern, a resource
+            is held by an object, and released by calling a method – usually called close, dispose, free, release, or similar – which releases
+            any resources the object is holding onto. Many languages offer language constructs to avoid having to call the dispose method explicitly in common situations.
+            The dispose pattern is primarily used in languages whose runtime environment have automatic garbage collection (see motivation below), and
+            thus may be styled as manual resource management in languages with automatic memory management.\n
+        &#169; https://en.wikipedia.org/wiki/Dispose_pattern</item>
+        <item>flush() in java</item>
+        <item>Flushes the output stream and forces any buffered output bytes to be written out. The general contract of flush is that calling it is an
+            indication that, if any bytes previously written have been buffered by the implementation of the output stream, such bytes should
+            immediately be written to their intended destination.</item>
         <item>Heap (data structure)</item>
         <item>In computer science, a heap is a specialized tree-based data structure that satisfies the heap property: if P is a parent node of C,
-            then the key (the value) of P is either greater than or equal to (in a max heap) or less than or equal to (in a min heap) the key of C.
-            The node at the (top) of the heap (with no parents) is called the root node. The heap is one maximally efficient implementation of an
-            abstract data type called a priority queue, and in fact priority queues are often referred to as (heaps), regardless of how they may
+            then the key (the value) of P is either greater than or equal to \"in a max heap\" or less than or equal to \"in a min heap\" the key of C.
+            The node at the \"top\" of the heap (with no parents) is called the root node. The heap is one maximally efficient implementation of an
+            abstract data type called a priority queue, and in fact priority queues are often referred to as \"heaps\", regardless of how they may
             be implemented. A common implementation of a heap is the binary heap, in which the tree is a binary tree (see figure). The heap data
             structure, specifically the binary heap, was introduced by J. W. J. Williams in 1964, as a data structure for the heapsort sorting algorithm.
             Heaps are also crucial in several efficient graph algorithms such as Dijkstra s algorithm. In a heap, the highest (or lowest) priority
             element is always stored at the root.\n &#169; https://en.wikipedia.org/wiki/Heap_(data_structure) </item>
         <item>Binary search tree</item>
         <item>In computer science, binary search trees (BST), sometimes called ordered or sorted binary trees, are a particular type of container:
-            data structures that store (items) (such as numbers, names etc.) in memory. They allow fast lookup, addition and removal of items, and can
+            data structures that store \"items\" (such as numbers, names etc.) in memory. They allow fast lookup, addition and removal of items, and can
             be used to implement either dynamic sets of items, or lookup tables that allow finding an item by its key (e.g., finding the phone
             number of a person by name).Binary search trees keep their keys in sorted order, so that lookup and other operations can use the principle of
             binary search: when looking for a key in a tree (or a place to insert a new key), they traverse the tree from root to leaf, making comparisons
