@@ -5,13 +5,12 @@
         <item>Terminology</item>
         <item>Basic Java Operators</item>
         <item>True or False statements</item>
-        <item></item>
+        <item>Understanding functions</item>
+
     </string-array>
 
     <string-array name="term_explanation">
-        <item>public</item>
-        <item>A class may be declared with the modifier public, in which case that class is visible
-            to all classes everywhere. If a class has no modifier (the default, also known as package-private), it is visible only within its own package</item>
+        <!-- A -->
         <item>abstract</item>
         <item>An abstract class is a class that is declared abstract—it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed.
             An abstract method is a method that is declared without an implementation (without braces, and followed by a semicolon), like this:\n
@@ -21,6 +20,207 @@
             With interfaces, all fields are automatically public, static, and final, and all methods that you declare or define \"as default methods\" are public.
             In addition, you can extend only one class, whether or not it is abstract, whereas you can implement any number of interfaces.\n
         &#169; https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html </item>
+
+        <item>ACID (in computer science)</item>
+        <item>In computer science, ACID (Atomicity, Consistency, Isolation, Durability) is a set of properties of database transactions intended to guarantee validity even in the event of errors, power failures, etc\n
+        Atomicity requires that each transaction be (all or nothing): if one part of the transaction fails, then the entire transaction fails, and the database state is left unchanged\n
+        The consistency property ensures that any transaction will bring the database from one valid state to another. Any data written to the database must be valid according to all defined rules,
+            including constraints, cascades, triggers, and any combination thereof. \n
+        The isolation property ensures that the concurrent execution of transactions results in a system state that would be obtained if transactions were
+            executed sequentially, i.e., one after the other. Providing isolation is the main goal of concurrency control. \n
+        The durability property ensures that once a transaction has been committed, it will remain so, even in the event of power loss, crashes, or errors. In a relational
+            database, for instance, once a group of SQL statements execute, the results need to be stored permanently (even if the database
+            crashes immediately thereafter). To defend against power loss, transactions (or their effects) must be recorded in a non-volatile memory.</item>
+
+        <item>assert</item>
+        <item>An assertion is a statement in the Java programming language that enables you to test your assumptions about your program. For example, if you write
+            a method that calculates the speed of a particle, you might assert that the calculated speed is less than the speed of light.
+        Each assertion contains a boolean expression that you believe will be true when the assertion executes. If it is not true, the system will throw an error.
+            By verifying that the boolean expression is indeed true, the assertion confirms your assumptions about the behavior of your program, increasing your
+            confidence that the program is free of errors.</item>
+        <item>Amortized analysis</item>
+        <item>In computer science, amortized analysis is a method for analyzing a given algorithm s time complexity, or how much of a resource,
+            especially time or memory, it takes to execute. The motivation for amortized analysis is that looking at the worst-case run time
+            per operation can be too pessimistic.\n
+            While certain operations for a given algorithm may have a significant cost in resources, other operations may not be as costly.
+            Amortized analysis considers both the costly and less costly operations together over the whole series of operations of the algorithm.
+            This may include accounting for different types of input, length of the input, and other factors that affect its performance. \n
+        &#169; https://en.wikipedia.org/wiki/Amortized_analysis</item>
+        <item>AVL tree</item>
+        <item>In computer science, an AVL tree (named after inventors Adelson-Velsky and Landis) is a self-balancing binary search tree. It was the first such
+            data structure to be invented. In an AVL tree, the heights of the two child subtrees of any node differ by at most one; if at any time they differ
+            by more than one, rebalancing is done to restore this property. Lookup, insertion, and deletion all take O(log n) time in both the average and worst
+            cases, where n is the number of nodes in the tree prior to the operation. Insertions and deletions may require the tree
+            to be rebalanced by one or more tree rotations.\n
+        &#169; https://en.wikipedia.org/wiki/AVL_tree</item>
+        <!-- BB -->
+        <item>Back-end focused</item>
+        <item>In software architecture, there may be many layers between the hardware and end user. Each can be spoken of as having a front end and a back end.
+            The front is an abstraction, simplifying the underlying component by providing a user-friendly interface, while the back usually handles business logic and data storage.
+            In telecommunication, the front can be considered a device or service, while the back is the infrastructure that supports provides this service.
+            A rule of thumb is that the front (or \"client\") side is any component manipulated by the user. The server-side (or \"back end\") code usually resides
+            on the server, often far removed physically from the user. \n
+        Back-end focused: - Scripting languages like Go, Nodejs, PHP, Python, Ruby, or Perl - Automated testing frameworks for the language being used
+        - Database administration - Scalability - Security concerns, authentication and authorization -Data transformation - Backup methods and software \n
+        &#169; https://en.wikipedia.org/wiki/Front_and_back_ends </item>
+
+        <item>Binary search tree</item>
+        <item>In computer science, binary search trees (BST), sometimes called ordered or sorted binary trees, are a particular type of container:
+            data structures that store \"items\" (such as numbers, names etc.) in memory. They allow fast lookup, addition and removal of items, and can
+            be used to implement either dynamic sets of items, or lookup tables that allow finding an item by its key (e.g., finding the phone
+            number of a person by name).Binary search trees keep their keys in sorted order, so that lookup and other operations can use the principle of
+            binary search: when looking for a key in a tree (or a place to insert a new key), they traverse the tree from root to leaf, making comparisons
+            to keys stored in the nodes of the tree and deciding, on the basis of the comparison, to continue searching in the left or right subtrees. \n
+        &#169; https://en.wikipedia.org/wiki/Binary_search_tree </item>
+        <item>Breadth-first search (BFS)</item>
+        <item>Breadth-first search (BFS) is an algorithm for traversing or searching tree or graph data structures. It starts at the tree root (or some arbitrary
+            node of a graph, sometimes referred to as a \"search key\" and explores the neighbor nodes first, before moving to the next level neighbours.
+BFS and its application in finding connected components of graphs were invented in 1945 by Konrad Zuse, in his \"rejected\" Ph.D. thesis on the Plankalkül
+            programming language, but this was not published until 1972. It was reinvented in 1959 by E. F. Moore, who used it to find the shortest path
+            out of a maze, and discovered independently by C. Y. Lee as a wire routing algorithm (published 1961)\n
+        &#169; https://en.wikipedia.org/wiki/Breadth-first_search</item>
+        <!-- C C -->
+        <!-- D  D -->
+
+        <item>Depth-first search (DFS)</item>
+        <item>Depth-first search (DFS) is an algorithm for traversing or searching tree or graph data structures. One starts at the root
+            (selecting some arbitrary node as the root in the case of a graph) and explores as far as possible along each branch before backtracking.
+        The time and space analysis of DFS differs according to its application area. In theoretical computer science, DFS is typically used to traverse
+            an entire graph, and takes time Θ(|V| + |E|), linear in the size of the graph. In these applications it also uses space O(|V|)
+            in the worst case to store the stack of vertices on the current search path as well as the set of already-visited vertices.
+            Thus, in this setting, the time and space bounds are the same as for breadth-first search and the choice of which of these
+            two algorithms to use depends less on their complexity and more on the different properties of the vertex orderings the two algorithms produce.\n
+        &#169; https://en.wikipedia.org/wiki/Depth-first_search</item>
+        <item>Dispose pattern</item>
+        <item>In object-oriented programming, the dispose pattern is a design pattern for resource management. In this pattern, a resource
+            is held by an object, and released by calling a method – usually called close, dispose, free, release, or similar – which releases
+            any resources the object is holding onto. Many languages offer language constructs to avoid having to call the dispose method explicitly in common situations.
+            The dispose pattern is primarily used in languages whose runtime environment have automatic garbage collection (see motivation below), and
+            thus may be styled as manual resource management in languages with automatic memory management.\n
+        &#169; https://en.wikipedia.org/wiki/Dispose_pattern</item>
+        <!-- E   E -->
+        <!-- F    F-->
+
+        <item>flush() in java</item>
+        <item>Flushes the output stream and forces any buffered output bytes to be written out. The general contract of flush is that calling it is an
+            indication that, if any bytes previously written have been buffered by the implementation of the output stream, such bytes should
+            immediately be written to their intended destination.</item>
+        <item>Front-end web development</item>
+        <item>Front-end web development is the practice of producing HTML, CSS and JavaScript for a website or Web Application so that a user
+            can see and interact with them directly. The challenge associated with front-end development is that the tools and techniques
+            used to create the front end of a website change constantly and so the developer needs to constantly be aware of how the field is developing.\n
+        Front-end focused: - Markup and web languages such as HTML, CSS, JavaScript, and ancillary libraries commonly used in those languages such as Sass or JQuery
+            - Asynchronous request handling and AJAX - Cross-browser compatibility issues and workarounds - Search engine optimization - Basic usage
+            of image editing tools such as GIMP or Photoshop - Specialized web editing software like Dreamweaver or Expression Web - Accessibility concerns</item>
+        <!-- G     G -->
+        <!-- H      H -->
+        <item>Hash function</item>
+        <item>A hash function is any function that can be used to map data of arbitrary size to data of fixed size.
+            The values returned by a hash function are called hash values, hash codes, digests, or simply hashes.
+            One use is a data structure called a hash table, widely used in computer software for rapid data lookup.
+            Hash functions accelerate table or database lookup by detecting duplicated records in a large file.
+        An example is finding similar stretches in DNA sequences. They are also useful in cryptography. A cryptographic
+            hash function allows one to easily verify that some input data maps to a given hash value, but if the input
+            data is unknown, it is deliberately difficult to reconstruct it (or equivalent alternatives) by knowing the
+            stored hash value. This is used for assuring integrity of transmitted data, and is the building block for HMACs,
+            which provide message authentication. \n &#169; https://en.wikipedia.org/wiki/Hash_function </item>
+
+        <item>Heap (data structure)</item>
+        <item>In computer science, a heap is a specialized tree-based data structure that satisfies the heap property: if P is a parent node of C,
+            then the key (the value) of P is either greater than or equal to \"in a max heap\" or less than or equal to \"in a min heap\" the key of C.
+            The node at the \"top\" of the heap (with no parents) is called the root node. The heap is one maximally efficient implementation of an
+            abstract data type called a priority queue, and in fact priority queues are often referred to as \"heaps\", regardless of how they may
+            be implemented. A common implementation of a heap is the binary heap, in which the tree is a binary tree (see figure). The heap data
+            structure, specifically the binary heap, was introduced by J. W. J. Williams in 1964, as a data structure for the heapsort sorting algorithm.
+            Heaps are also crucial in several efficient graph algorithms such as Dijkstra s algorithm. In a heap, the highest (or lowest) priority
+            element is always stored at the root.\n &#169; https://en.wikipedia.org/wiki/Heap_(data_structure) </item>
+        <!-- I       I -->
+        <item>instanceof</item>
+        <item>The instanceof keyword can be used to test if an object is of a specified type.\n
+            if (objectReference instanceof type)</item>
+        <!-- J        J -->
+        <!-- K         K -->
+        <item>Karatsuba algorithm</item>
+        <item>The Karatsuba algorithm is a fast multiplication algorithm. It was discovered by Anatoly Karatsuba in 1960 and published in 1962.
+            It reduces the multiplication of two n-digit numbers to at most {\displaystyle n^{\log _{2}3}\approx n^{1.585}} n^{\log _{2}3}\approx n^{1.585}
+            single-digit multiplications in general (and exactly {\displaystyle n^{\log _{2}3}} n^{\log _{2}3} when n is a power of 2).
+            It is therefore faster than the classical algorithm, which requires n2 single-digit products. For example, the Karatsuba algorithm
+            requires 310 = 59,049 single-digit multiplications to multiply two 1024-digit numbers (n = 1024 = 210), whereas the classical algorithm
+            requires (210)2 = 1,048,576.\n &#169; https://en.wikipedia.org/wiki/Karatsuba_algorithm </item>
+        <!-- L          L -->
+        <!-- M           M-->
+        <item>Merge sort</item>
+        <item>Merge sort is an efficient, general-purpose, comparison-based sorting algorithm. Most implementations produce a stable sort, which means
+            that the implementation preserves the input order of equal elements in the sorted output. Mergesort is a divide and conquer algorithm that
+            was invented by John von Neumann in 1945. 1. Divide the unsorted list into n sublists, each containing 1 element (a list of 1 element is considered sorted). 2.
+Repeatedly merge sublists to produce new sorted sublists until there is only 1 sublist remaining. This will be the sorted list. Time Complexity Best, average and worst: O(n log(n))
+            Space copmlexity worst: O(n)
+            \n &#169; https://en.wikipedia.org/wiki/Merge_sort</item>
+        <!-- N            N-->
+        <item>Node.js</item>
+        <item>Node.js is an open-source, cross-platform JavaScript run-time environment for executing JavaScript code server-side. Historically,
+            JavaScript was used primarily for client-side scripting, in which scripts written in JavaScript are embedded in a webpage s HTML,
+            to be run client-side by a JavaScript engine in the user s web browser. Node.js enables JavaScript to be used for server-side
+            scripting, and runs scripts server-side to produce dynamic web page content before the page is sent to the user s web browser.
+            Consequently, Node.js has become one of the foundational elements of the \"JavaScript everywhere\" paradigm, allowing web application
+            development to unify around a single programming language, rather than rely on a different language for writing server side scripts.\n
+        &#169; https://en.wikipedia.org/wiki/Node.js</item>
+        <!-- O           O -->
+        <!-- P            P-->
+        <item>private</item>
+        <item>The private modifier specifies that the member can only be accessed in its own class.</item>
+        <item>protected</item>
+        <item>The protected modifier specifies that the member can only be accessed within its own package
+            (as with package-private) and, in addition, by a subclass of its class in another package.</item>
+        <item>public</item>
+        <item>A class may be declared with the modifier public, in which case that class is visible
+            to all classes everywhere. If a class has no modifier (the default, also known as package-private), it is visible only within its own package</item>
+        <!-- Q             Q-->
+        <item>Quicksort</item>
+        <item>Quicksort (partition-exchange sort) is an efficient sorting algorithm, serving as a systematic method for placing the elements of
+            an array in order. Developed by Tony Hoare in 1959, it is still a commonly used algorithm for sorting. When implemented well,
+            it can be about two or three times faster than its main competitors, merge sort and heapsort. Quicksort is a comparison sort, meaning that it can
+            sort items of any type for which a \"less-than\" relation (formally, a total order) is defined. In efficient implementations it is not a stable sort,
+            meaning that the relative order of equal sort items is not preserved. Quicksort can operate in-place on an array, requiring small additional amounts
+            of memory to perform the sorting. It is very similar to selection sort, except that it does not always choose worst-case partition.Time Complexity
+        Avarage: O(n log(n)), Worst O (n^2). Worst case space Complexity: O(log(n)) \n &#169; https://en.wikipedia.org/wiki/Quicksort </item>
+        <!-- R              R-->
+        <item>Rabin-Karp algorithm</item>
+        <item>Karp–Rabin algorithm is a string searching algorithm created by Richard M. Karp and Michael O. Rabin
+            (1987) that uses hashing to find any one of a set of pattern strings in a text. For text of length n and p
+            patterns of combined length m, its average and best case running time is O(n+m) in space O(p), but its worst-case
+            time is O(nm). In contrast, the Aho–Corasick string matching algorithm has asymptotic worst-time complexity O(n+m) in space O(m).\n
+            A practical application of the algorithm is detecting plagiarism. Given source material, the algorithm can rapidly search through
+            a paper for instances of sentences from the source material, ignoring details such as case and punctuation. Because of the abundance
+            of the sought strings, single-string searching algorithms are impractical. \n &#169; https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp_algorithm</item>
+
+        <item>Radix sort</item>
+        <item>In computer science, radix sort is a non-comparative integer sorting algorithm that sorts data with integer keys by grouping keys by
+            the individual digits which share the same significant position and value. A positional notation is required, but because integers can
+            represent strings of characters (e.g., names or dates) and specially formatted floating point numbers, radix sort is not limited to
+            integers. Most digital computers internally represent all of their data as electronic representations of binary numbers, so processing
+            the digits of integer representations by groups of binary digit representations is most convenient. Two classifications
+            of radix sorts are least significant digit (LSD) radix sorts and most significant digit (MSD) radix sorts. Time Complexity Best, average and worst
+            O(n+k) Space Complexity O(k). \n
+        &#169; https://en.wikipedia.org/wiki/Radix_sort</item>
+        <!-- S               S-->
+
+        <item>Serializable</item>
+        <item>Serializability of a class is enabled by the class implementing the java.io.Serializable interface. Classes that do not implement this
+            interface will not have any of their state serialized or deserialized. All subtypes of a serializable class are themselves serializable.
+            The serialization interface has no methods or fields and serves only to identify the semantics of being serializable. To allow subtypes of
+            non-serializable classes to be serialized, the subtype may assume responsibility for saving and restoring the state of the supertype s
+            public, protected, and (if accessible) package fields. The subtype may assume this responsibility only if the class it extends has an
+            accessible no-arg constructor to initialize the class s state. It is an error to declare a class Serializable if this is not the case.
+            The error will be detected at runtime.\n During deserialization, the fields of non-serializable classes will be initialized using the
+            public or protected no-arg constructor of the class. A no-arg constructor must be accessible to the subclass that is serializable.
+            The fields of serializable subclasses will be restored from the stream.\n &#169; https://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html </item>
+        <item>strictfp</item>
+        <item>strictfp is a keyword in the Java programming language that restricts floating-point calculations to ensure portability. In the absence of overflow
+            or underflow, there is no difference in results with or without strictfp. If repeatability is essential, the strictfp modifier can be used to ensure
+            that overflow and underflow occurs in the same places on all platforms. Without the strictfp modifier, intermediate results may use a larger exponent range.
+            The strictfp modifier accomplishes this by representing all intermediate values as IEEE single precision and double precision values, as occurred in
+            earlier versions of the JVM. \n &#169; https://en.wikipedia.org/wiki/Strictfp</item>
         <item>synchronize</item>
         <item>The Java programming language provides two basic synchronization idioms: synchronized methods and synchronized statements.
             The more complex of the two, synchronized statements, are described in the next section. This section is about synchronized methods.\n
@@ -29,13 +229,17 @@
             final fields, which cannot be modified after the object is constructed, can be safely read through non-synchronized methods, once the
             object is constructed) This strategy is effective, but can present problems with liveness, as we ll see later in this lesson.\n
         &#169; https://docs.oracle.com/javase/tutorial/essential/concurrency/syncmeth.html</item>
-        <item>Karatsuba algorithm</item>
-        <item>The Karatsuba algorithm is a fast multiplication algorithm. It was discovered by Anatoly Karatsuba in 1960 and published in 1962.
-            It reduces the multiplication of two n-digit numbers to at most {\displaystyle n^{\log _{2}3}\approx n^{1.585}} n^{\log _{2}3}\approx n^{1.585}
-            single-digit multiplications in general (and exactly {\displaystyle n^{\log _{2}3}} n^{\log _{2}3} when n is a power of 2).
-            It is therefore faster than the classical algorithm, which requires n2 single-digit products. For example, the Karatsuba algorithm
-            requires 310 = 59,049 single-digit multiplications to multiply two 1024-digit numbers (n = 1024 = 210), whereas the classical algorithm
-            requires (210)2 = 1,048,576.\n &#169; https://en.wikipedia.org/wiki/Karatsuba_algorithm </item>
+        <!-- T                T-->
+        <item>Topological sort</item>
+        <item>In the field of computer science, a topological sort or topological ordering of a directed graph is a linear ordering of its vertices
+            such that for every directed edge uv from vertex u to vertex v, u comes before v in the ordering. For instance, the vertices of the graph
+            may represent tasks to be performed, and the edges may represent constraints that one task must be performed before another; in this application,
+            a topological ordering is just a valid sequence for the tasks. A topological ordering is possible if and only if the graph has no directed cycles,
+            that is, if it is a directed acyclic graph (DAG). Any DAG has at least one topological ordering, and algorithms are known for constructing a
+            topological ordering of any DAG in linear time. \n
+        &#169; https://en.wikipedia.org/wiki/Topological_sorting</item>
+        <!-- U                 U-->
+        <!-- V                  V-->
         <item>volatile</item>
         <item>Declaring a volatile Java variable means:\n
             Essentially, volatile is used to indicate that a variable\'s value will be modified by different threads.\n
@@ -50,148 +254,12 @@
             as an atomic operation (unless we re prepared to \"miss an update\");\n
             a volatile variable that is an object reference may be null (because you re effectively synchronizing on the reference, not the actual object).\n
             Attempting to synchronize on a null object will throw a NullPointerException.</item>
-        <item>Back-end focused</item>
-        <item>In software architecture, there may be many layers between the hardware and end user. Each can be spoken of as having a front end and a back end.
-            The front is an abstraction, simplifying the underlying component by providing a user-friendly interface, while the back usually handles business logic and data storage.
-            In telecommunication, the front can be considered a device or service, while the back is the infrastructure that supports provides this service.
-            A rule of thumb is that the front (or \"client\") side is any component manipulated by the user. The server-side (or \"back end\") code usually resides
-            on the server, often far removed physically from the user. \n
-        Back-end focused: - Scripting languages like Go, Nodejs, PHP, Python, Ruby, or Perl - Automated testing frameworks for the language being used
-        - Database administration - Scalability - Security concerns, authentication and authorization -Data transformation - Backup methods and software \n
-        &#169; https://en.wikipedia.org/wiki/Front_and_back_ends </item>
-        <item>Breadth-first search (BFS)</item>
-        <item>Breadth-first search (BFS) is an algorithm for traversing or searching tree or graph data structures. It starts at the tree root (or some arbitrary
-            node of a graph, sometimes referred to as a \"search key\" and explores the neighbor nodes first, before moving to the next level neighbours.
-BFS and its application in finding connected components of graphs were invented in 1945 by Konrad Zuse, in his \"rejected\" Ph.D. thesis on the Plankalkül
-            programming language, but this was not published until 1972. It was reinvented in 1959 by E. F. Moore, who used it to find the shortest path
-            out of a maze, and discovered independently by C. Y. Lee as a wire routing algorithm (published 1961)\n
-        &#169; https://en.wikipedia.org/wiki/Breadth-first_search</item>
-        <item>Node.js</item>
-        <item>Node.js is an open-source, cross-platform JavaScript run-time environment for executing JavaScript code server-side. Historically,
-            JavaScript was used primarily for client-side scripting, in which scripts written in JavaScript are embedded in a webpage s HTML,
-            to be run client-side by a JavaScript engine in the user s web browser. Node.js enables JavaScript to be used for server-side
-            scripting, and runs scripts server-side to produce dynamic web page content before the page is sent to the user s web browser.
-            Consequently, Node.js has become one of the foundational elements of the \"JavaScript everywhere\" paradigm, allowing web application
-            development to unify around a single programming language, rather than rely on a different language for writing server side scripts.\n
-        &#169; https://en.wikipedia.org/wiki/Node.js</item>
-        <item>Front-end web development</item>
-        <item>Front-end web development is the practice of producing HTML, CSS and JavaScript for a website or Web Application so that a user
-            can see and interact with them directly. The challenge associated with front-end development is that the tools and techniques
-            used to create the front end of a website change constantly and so the developer needs to constantly be aware of how the field is developing.\n
-        Front-end focused: - Markup and web languages such as HTML, CSS, JavaScript, and ancillary libraries commonly used in those languages such as Sass or JQuery
-            - Asynchronous request handling and AJAX - Cross-browser compatibility issues and workarounds - Search engine optimization - Basic usage
-            of image editing tools such as GIMP or Photoshop - Specialized web editing software like Dreamweaver or Expression Web - Accessibility concerns</item>
-        <item>Radix sort</item>
-        <item>In computer science, radix sort is a non-comparative integer sorting algorithm that sorts data with integer keys by grouping keys by
-            the individual digits which share the same significant position and value. A positional notation is required, but because integers can
-            represent strings of characters (e.g., names or dates) and specially formatted floating point numbers, radix sort is not limited to
-            integers. Radix sort dates back as far as 1887 to the work of Herman Hollerith on tabulating machines.
-            Most digital computers internally represent all of their data as electronic representations of binary numbers, so processing
-            the digits of integer representations by groups of binary digit representations is most convenient. Two classifications
-            of radix sorts are least significant digit (LSD) radix sorts and most significant digit (MSD) radix sorts. LSD radix sorts
-            process the integer representations starting from the least digit and move towards the most significant digit. MSD radix sorts work the other way around.\n
-        &#169; https://en.wikipedia.org/wiki/Radix_sort</item>
-        <item>Serializable</item>
-        <item>Serializability of a class is enabled by the class implementing the java.io.Serializable interface. Classes that do not implement this
-            interface will not have any of their state serialized or deserialized. All subtypes of a serializable class are themselves serializable.
-            The serialization interface has no methods or fields and serves only to identify the semantics of being serializable. To allow subtypes of
-            non-serializable classes to be serialized, the subtype may assume responsibility for saving and restoring the state of the supertype s
-            public, protected, and (if accessible) package fields. The subtype may assume this responsibility only if the class it extends has an
-            accessible no-arg constructor to initialize the class s state. It is an error to declare a class Serializable if this is not the case.
-            The error will be detected at runtime.\n During deserialization, the fields of non-serializable classes will be initialized using the
-            public or protected no-arg constructor of the class. A no-arg constructor must be accessible to the subclass that is serializable.
-            The fields of serializable subclasses will be restored from the stream.\n &#169; https://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html </item>
-        <item>ACID (in computer science)</item>
-        <item>In computer science, ACID (Atomicity, Consistency, Isolation, Durability) is a set of properties of database transactions intended to guarantee validity even in the event of errors, power failures, etc\n
-        Atomicity requires that each transaction be (all or nothing): if one part of the transaction fails, then the entire transaction fails, and the database state is left unchanged\n
-        The consistency property ensures that any transaction will bring the database from one valid state to another. Any data written to the database must be valid according to all defined rules,
-            including constraints, cascades, triggers, and any combination thereof. \n
-        The isolation property ensures that the concurrent execution of transactions results in a system state that would be obtained if transactions were
-            executed sequentially, i.e., one after the other. Providing isolation is the main goal of concurrency control. \n
-        The durability property ensures that once a transaction has been committed, it will remain so, even in the event of power loss, crashes, or errors. In a relational
-            database, for instance, once a group of SQL statements execute, the results need to be stored permanently (even if the database
-            crashes immediately thereafter). To defend against power loss, transactions (or their effects) must be recorded in a non-volatile memory.</item>
-        <item>Dispose pattern</item>
-        <item>In object-oriented programming, the dispose pattern is a design pattern for resource management. In this pattern, a resource
-            is held by an object, and released by calling a method – usually called close, dispose, free, release, or similar – which releases
-            any resources the object is holding onto. Many languages offer language constructs to avoid having to call the dispose method explicitly in common situations.
-            The dispose pattern is primarily used in languages whose runtime environment have automatic garbage collection (see motivation below), and
-            thus may be styled as manual resource management in languages with automatic memory management.\n
-        &#169; https://en.wikipedia.org/wiki/Dispose_pattern</item>
-        <item>flush() in java</item>
-        <item>Flushes the output stream and forces any buffered output bytes to be written out. The general contract of flush is that calling it is an
-            indication that, if any bytes previously written have been buffered by the implementation of the output stream, such bytes should
-            immediately be written to their intended destination.</item>
-        <item>Heap (data structure)</item>
-        <item>In computer science, a heap is a specialized tree-based data structure that satisfies the heap property: if P is a parent node of C,
-            then the key (the value) of P is either greater than or equal to \"in a max heap\" or less than or equal to \"in a min heap\" the key of C.
-            The node at the \"top\" of the heap (with no parents) is called the root node. The heap is one maximally efficient implementation of an
-            abstract data type called a priority queue, and in fact priority queues are often referred to as \"heaps\", regardless of how they may
-            be implemented. A common implementation of a heap is the binary heap, in which the tree is a binary tree (see figure). The heap data
-            structure, specifically the binary heap, was introduced by J. W. J. Williams in 1964, as a data structure for the heapsort sorting algorithm.
-            Heaps are also crucial in several efficient graph algorithms such as Dijkstra s algorithm. In a heap, the highest (or lowest) priority
-            element is always stored at the root.\n &#169; https://en.wikipedia.org/wiki/Heap_(data_structure) </item>
-        <item>Binary search tree</item>
-        <item>In computer science, binary search trees (BST), sometimes called ordered or sorted binary trees, are a particular type of container:
-            data structures that store \"items\" (such as numbers, names etc.) in memory. They allow fast lookup, addition and removal of items, and can
-            be used to implement either dynamic sets of items, or lookup tables that allow finding an item by its key (e.g., finding the phone
-            number of a person by name).Binary search trees keep their keys in sorted order, so that lookup and other operations can use the principle of
-            binary search: when looking for a key in a tree (or a place to insert a new key), they traverse the tree from root to leaf, making comparisons
-            to keys stored in the nodes of the tree and deciding, on the basis of the comparison, to continue searching in the left or right subtrees. \n
-        &#169; https://en.wikipedia.org/wiki/Binary_search_tree </item>
-        <item>AVL tree</item>
-        <item>In computer science, an AVL tree (named after inventors Adelson-Velsky and Landis) is a self-balancing binary search tree. It was the first such
-            data structure to be invented. In an AVL tree, the heights of the two child subtrees of any node differ by at most one; if at any time they differ
-            by more than one, rebalancing is done to restore this property. Lookup, insertion, and deletion all take O(log n) time in both the average and worst
-            cases, where n is the number of nodes in the tree prior to the operation. Insertions and deletions may require the tree
-            to be rebalanced by one or more tree rotations.\n
-        &#169; https://en.wikipedia.org/wiki/AVL_tree</item>
-        <item>assert</item>
-        <item>An assertion is a statement in the Java programming language that enables you to test your assumptions about your program. For example, if you write
-            a method that calculates the speed of a particle, you might assert that the calculated speed is less than the speed of light.
-        Each assertion contains a boolean expression that you believe will be true when the assertion executes. If it is not true, the system will throw an error.
-            By verifying that the boolean expression is indeed true, the assertion confirms your assumptions about the behavior of your program, increasing your
-            confidence that the program is free of errors.</item>
-        <item>instanceof</item>
-        <item>The instanceof keyword can be used to test if an object is of a specified type.\n
-            if (objectReference instanceof type)</item>
-        <item>private</item>
-        <item>The private modifier specifies that the member can only be accessed in its own class.</item>
-        <item>strictfp</item>
-        <item>strictfp is a keyword in the Java programming language that restricts floating-point calculations to ensure portability. In the absence of overflow
-            or underflow, there is no difference in results with or without strictfp. If repeatability is essential, the strictfp modifier can be used to ensure
-            that overflow and underflow occurs in the same places on all platforms. Without the strictfp modifier, intermediate results may use a larger exponent range.
-            The strictfp modifier accomplishes this by representing all intermediate values as IEEE single precision and double precision values, as occurred in
-            earlier versions of the JVM. \n &#169; https://en.wikipedia.org/wiki/Strictfp</item>
-        <item>protected</item>
-        <item>The protected modifier specifies that the member can only be accessed within its own package
-            (as with package-private) and, in addition, by a subclass of its class in another package.</item>
-        <item>Hash function</item>
-        <item>A hash function is any function that can be used to map data of arbitrary size to data of fixed size.
-            The values returned by a hash function are called hash values, hash codes, digests, or simply hashes.
-            One use is a data structure called a hash table, widely used in computer software for rapid data lookup.
-            Hash functions accelerate table or database lookup by detecting duplicated records in a large file.
-        An example is finding similar stretches in DNA sequences. They are also useful in cryptography. A cryptographic
-            hash function allows one to easily verify that some input data maps to a given hash value, but if the input
-            data is unknown, it is deliberately difficult to reconstruct it (or equivalent alternatives) by knowing the
-            stored hash value. This is used for assuring integrity of transmitted data, and is the building block for HMACs,
-            which provide message authentication. \n &#169; https://en.wikipedia.org/wiki/Hash_function </item>
-        <item>Rabin-Karp algorithm</item>
-        <item>Karp–Rabin algorithm is a string searching algorithm created by Richard M. Karp and Michael O. Rabin
-            (1987) that uses hashing to find any one of a set of pattern strings in a text. For text of length n and p
-            patterns of combined length m, its average and best case running time is O(n+m) in space O(p), but its worst-case
-            time is O(nm). In contrast, the Aho–Corasick string matching algorithm has asymptotic worst-time complexity O(n+m) in space O(m).\n
-            A practical application of the algorithm is detecting plagiarism. Given source material, the algorithm can rapidly search through
-            a paper for instances of sentences from the source material, ignoring details such as case and punctuation. Because of the abundance
-            of the sought strings, single-string searching algorithms are impractical. \n &#169; https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp_algorithm</item>
-        <item>Amortized analysis</item>
-        <item>In computer science, amortized analysis is a method for analyzing a given algorithm s time complexity, or how much of a resource,
-            especially time or memory, it takes to execute. The motivation for amortized analysis is that looking at the worst-case run time
-            per operation can be too pessimistic.\n
-            While certain operations for a given algorithm may have a significant cost in resources, other operations may not be as costly.
-            Amortized analysis considers both the costly and less costly operations together over the whole series of operations of the algorithm.
-            This may include accounting for different types of input, length of the input, and other factors that affect its performance. \n
-        &#169; https://en.wikipedia.org/wiki/Amortized_analysis</item>
+        <!-- W                  W-->
+        <!-- X                   X-->
+        <!-- Y                    Y-->
+        <!-- Z                     Z-->
+
+
     </string-array>
 
 
