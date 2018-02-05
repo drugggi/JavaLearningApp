@@ -39,7 +39,7 @@
             By verifying that the boolean expression is indeed true, the assertion confirms your assumptions about the behavior of your program, increasing your
             confidence that the program is free of errors.</item>
         <item>Amortized analysis</item>
-        <item>In computer science, amortized analysis is a method for analyzing a given algorithm s time complexity, or how much of a resource,
+        <item>In computer science, amortized analysis is a method for analyzing a given algorithm\'s time complexity, or how much of a resource,
             especially time or memory, it takes to execute. The motivation for amortized analysis is that looking at the worst-case run time
             per operation can be too pessimistic.\n
             While certain operations for a given algorithm may have a significant cost in resources, other operations may not be as costly.
@@ -63,7 +63,14 @@
         Back-end focused: - Scripting languages like Go, Nodejs, PHP, Python, Ruby, or Perl - Automated testing frameworks for the language being used
         - Database administration - Scalability - Security concerns, authentication and authorization -Data transformation - Backup methods and software \n
         &#169; https://en.wikipedia.org/wiki/Front_and_back_ends </item>
-
+        <item>Bellman–Ford algorithm</item>
+        <item>The Bellman–Ford algorithm is an algorithm that computes shortest paths from a single source vertex to all of the other vertices in a weighted digraph.
+            It is slower than Dijkstra\'s algorithm for the same problem, but more versatile, as it is capable of handling graphs in which some of the edge weights
+            are negative numbers. Negative edge weights are found in various applications of graphs, hence the usefulness of this algorithm. If a graph contains a
+            \"negative cycle\" (i.e. a cycle whose edges sum to a negative value) that is reachable from the source, then there is no cheapest path: any path that
+            has a point on the negative cycle can be made cheaper by one more walk around the negative cycle. In such a case, the Bellman–Ford algorithm can
+            detect negative cycles and report their existence.Performance Best: o(|E|) Worst: O(|V||E|). Worst case space copmlexity: O(|V|). \n
+        &#159; https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm</item>
         <item>Binary search tree</item>
         <item>In computer science, binary search trees (BST), sometimes called ordered or sorted binary trees, are a particular type of container:
             data structures that store \"items\" (such as numbers, names etc.) in memory. They allow fast lookup, addition and removal of items, and can
@@ -91,6 +98,16 @@ BFS and its application in finding connected components of graphs were invented 
             Thus, in this setting, the time and space bounds are the same as for breadth-first search and the choice of which of these
             two algorithms to use depends less on their complexity and more on the different properties of the vertex orderings the two algorithms produce.\n
         &#169; https://en.wikipedia.org/wiki/Depth-first_search</item>
+        <item>Dijkstra\'s algorithm</item>
+        <item>Dijkstra\'s algorithm is an algorithm for finding the shortest paths between nodes in a graph, which may represent, for example, road networks.
+The algorithm exists in many variants; Dijkstra's original variant found the shortest path between two nodes, but a more common variant fixes a single node as
+            the \"source\" node and finds shortest paths from the source to all other nodes in the graph, producing a shortest-path tree.
+For a given source node in the graph, the algorithm finds the shortest path between that node and every other. It can also be used for finding the shortest
+            paths from a single node to a single destination node by stopping the algorithm once the shortest path to the destination node has been determined.
+            As a result, the shortest path algorithm is widely used in network routing protocols, most notably IS-IS (Intermediate System to Intermediate System)
+            and Open Shortest Path First (OSPF). Run time O(V^2). The implementation based on a min-priority queue implemented by a Fibonacci heap and running in
+            O(|E|+|V|log|v|). \n
+            &#136; https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm </item>
         <item>Dispose pattern</item>
         <item>In object-oriented programming, the dispose pattern is a design pattern for resource management. In this pattern, a resource
             is held by an object, and released by calling a method – usually called close, dispose, free, release, or similar – which releases
@@ -98,6 +115,18 @@ BFS and its application in finding connected components of graphs were invented 
             The dispose pattern is primarily used in languages whose runtime environment have automatic garbage collection (see motivation below), and
             thus may be styled as manual resource management in languages with automatic memory management.\n
         &#169; https://en.wikipedia.org/wiki/Dispose_pattern</item>
+        <item>Dynamic programming</item>
+        <item>In computer science, mathematics, dynamic programming is a method for solving a complex problem by breaking it down into a collection of simpler
+            subproblems, solving each of those subproblems just once, and storing their solutions. The next time the same subproblem occurs, instead of recomputing
+            its solution, one simply looks up the previously computed solution, thereby saving computation time at the expense of a (hopefully) modest expenditure
+            in storage space. (Each of the subproblem solutions is indexed in some way, typically based on the values of its input parameters, so as to facilitate its lookup.)
+            The technique of storing solutions to subproblems instead of recomputing them is called \"memoization\". Dynamic programming algorithms are often used for
+            optimization. A dynamic programming algorithm will examine the previously solved subproblems and will combine their solutions to give the best
+            solution for the given problem. In comparison, a greedy algorithm treats the solution as some sequence of steps and picks the locally optimal choice
+            at each step. Using a greedy algorithm does not always guarantee an optimal solution, when a dynamic programming algorithm does, because picking locally
+            optimal choices may result in a bad global solution. One advantage of a greedy algorithm over a dynamic programming algorithm is that the greedy algorithm
+            is often faster and simpler to calculate. Some greedy algorithms (such as Kruskal\'s or Prim\'s for minimum spanning trees) are known to lead to the optimal solution. \n
+        &#169; https://en.wikipedia.org/wiki/Dynamic_programming</item>
         <!-- E   E -->
         <!-- F    F-->
 
@@ -132,7 +161,7 @@ BFS and its application in finding connected components of graphs were invented 
             abstract data type called a priority queue, and in fact priority queues are often referred to as \"heaps\", regardless of how they may
             be implemented. A common implementation of a heap is the binary heap, in which the tree is a binary tree (see figure). The heap data
             structure, specifically the binary heap, was introduced by J. W. J. Williams in 1964, as a data structure for the heapsort sorting algorithm.
-            Heaps are also crucial in several efficient graph algorithms such as Dijkstra s algorithm. In a heap, the highest (or lowest) priority
+            Heaps are also crucial in several efficient graph algorithms such as Dijkstra\'s algorithm. In a heap, the highest (or lowest) priority
             element is always stored at the root.\n &#169; https://en.wikipedia.org/wiki/Heap_(data_structure) </item>
         <!-- I       I -->
         <item>instanceof</item>
@@ -159,9 +188,9 @@ Repeatedly merge sublists to produce new sorted sublists until there is only 1 s
         <!-- N            N-->
         <item>Node.js</item>
         <item>Node.js is an open-source, cross-platform JavaScript run-time environment for executing JavaScript code server-side. Historically,
-            JavaScript was used primarily for client-side scripting, in which scripts written in JavaScript are embedded in a webpage s HTML,
-            to be run client-side by a JavaScript engine in the user s web browser. Node.js enables JavaScript to be used for server-side
-            scripting, and runs scripts server-side to produce dynamic web page content before the page is sent to the user s web browser.
+            JavaScript was used primarily for client-side scripting, in which scripts written in JavaScript are embedded in a webpage\'s HTML,
+            to be run client-side by a JavaScript engine in the user\'s web browser. Node.js enables JavaScript to be used for server-side
+            scripting, and runs scripts server-side to produce dynamic web page content before the page is sent to the user\'s web browser.
             Consequently, Node.js has become one of the foundational elements of the \"JavaScript everywhere\" paradigm, allowing web application
             development to unify around a single programming language, rather than rely on a different language for writing server side scripts.\n
         &#169; https://en.wikipedia.org/wiki/Node.js</item>
@@ -211,7 +240,7 @@ Repeatedly merge sublists to produce new sorted sublists until there is only 1 s
             The serialization interface has no methods or fields and serves only to identify the semantics of being serializable. To allow subtypes of
             non-serializable classes to be serialized, the subtype may assume responsibility for saving and restoring the state of the supertype s
             public, protected, and (if accessible) package fields. The subtype may assume this responsibility only if the class it extends has an
-            accessible no-arg constructor to initialize the class s state. It is an error to declare a class Serializable if this is not the case.
+            accessible no-arg constructor to initialize the class\'s state. It is an error to declare a class Serializable if this is not the case.
             The error will be detected at runtime.\n During deserialization, the fields of non-serializable classes will be initialized using the
             public or protected no-arg constructor of the class. A no-arg constructor must be accessible to the subclass that is serializable.
             The fields of serializable subclasses will be restored from the stream.\n &#169; https://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html </item>
@@ -225,7 +254,7 @@ Repeatedly merge sublists to produce new sorted sublists until there is only 1 s
         <item>The Java programming language provides two basic synchronization idioms: synchronized methods and synchronized statements.
             The more complex of the two, synchronized statements, are described in the next section. This section is about synchronized methods.\n
             Synchronized methods enable a simple strategy for preventing thread interference and memory consistency errors: if an object is visible
-            to more than one thread, all reads or writes to that object s variables are done through synchronized methods. (An important exception:
+            to more than one thread, all reads or writes to that object\'s variables are done through synchronized methods. (An important exception:
             final fields, which cannot be modified after the object is constructed, can be safely read through non-synchronized methods, once the
             object is constructed) This strategy is effective, but can present problems with liveness, as we ll see later in this lesson.\n
         &#169; https://docs.oracle.com/javase/tutorial/essential/concurrency/syncmeth.html</item>

@@ -32,6 +32,7 @@ public class CodeReading extends AppCompatActivity {
             public void onClick(View v) {
 
                 if (answerBtn.getText().equals("New Problem")) {
+                    answerEditText.setText("");
                     answerBtn.setText("Check Answer");
                     Toast.makeText(CodeReading.this,"New problem soon!", Toast.LENGTH_SHORT).show();
                     problemTextView.setText(guess_this.GetNewProblem());
