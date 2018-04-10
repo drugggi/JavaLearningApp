@@ -22,21 +22,21 @@ public class TyyppiMuunnos {
         switch(randomOperandi()) {
             case DOUBLE:
                 operoitava = new DoubleLuku();
-                //return operoitava.Muunna();
+                return operoitava.Muunna();
             case INTEGER:
                 operoitava = new IntegerLuku();
-               // return operoitava.Muunna();
+                return operoitava.Muunna();
             case BINARY:
                 operoitava = new BinaryLuku();
-              //  return operoitava.Muunna();
+                return operoitava.Muunna();
             case STRING:
                 operoitava = new StringLuku();
-                //return operoitava.Muunna();
+                return operoitava.Muunna();
             case SCANNER:
                 operoitava = new ScannerLuku();
-                //return operoitava.Muunna();
+                return operoitava.Muunna();
             default:
-                // operoitava = new IntegerLuku();
+                 operoitava = new IntegerLuku();
         }
         return operoitava.Muunna();
 
@@ -46,8 +46,8 @@ public class TyyppiMuunnos {
     private operandi randomOperandi() {
 
         int pick = rng.nextInt(operandi.values().length);
-        return operandi.SCANNER;
-        // return operandi.values()[pick];
+        //return operandi.SCANNER;
+         return operandi.values()[pick];
     }
 
     public String GetAnswer() {

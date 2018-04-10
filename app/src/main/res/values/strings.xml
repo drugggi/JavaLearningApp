@@ -87,6 +87,12 @@ BFS and its application in finding connected components of graphs were invented 
             out of a maze, and discovered independently by C. Y. Lee as a wire routing algorithm (published 1961)\n
         &#169; https://en.wikipedia.org/wiki/Breadth-first_search</item>
         <!-- C C -->
+        <item>Cast operator</item>
+        <item>1. Cast operator is used to convert numeric values from one numeric type to another or to change an object reference to a compatible type.\n
+2. Used to enable conversions that would normally be disallowed by the compiler. a reference of any object can be cast to a reference of type Object\n
+3. a reference to an object can be cast into a reference of type ClassName if the actual class of the object, when it was created, is a subclass of ClassName.\n
+4. a reference to an object can be cast into a reference of type InterfaceName if the class of the object implements Interface, if the object is a subinterface
+            of InterfaceName or if the object is an array type and InterfaceName is the Cloneable interface</item>
         <!-- D  D -->
 
         <item>Depth-first search (DFS)</item>
