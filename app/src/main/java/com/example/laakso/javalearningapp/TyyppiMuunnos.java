@@ -8,7 +8,7 @@ import java.util.Random;
 
 public class TyyppiMuunnos {
 
-    private enum operandi {DOUBLE, INTEGER, BINARY, STRING, SCANNER }
+    private enum operandi {DOUBLE, INTEGER, BINARY, STRING, SCANNER, CONTAINERS }
     Luku operoitava;
    // String answer;
     Random rng;
@@ -35,6 +35,9 @@ public class TyyppiMuunnos {
             case SCANNER:
                 operoitava = new ScannerLuku();
                 return operoitava.Muunna();
+            case CONTAINERS:
+                operoitava = new Containers();
+                return operoitava.Muunna();
             default:
                  operoitava = new IntegerLuku();
         }
@@ -46,7 +49,7 @@ public class TyyppiMuunnos {
     private operandi randomOperandi() {
 
         int pick = rng.nextInt(operandi.values().length);
-        //return operandi.SCANNER;
+        //return operandi.CONTAINERS;
          return operandi.values()[pick];
     }
 
